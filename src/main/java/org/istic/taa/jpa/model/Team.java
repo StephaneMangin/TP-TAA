@@ -1,0 +1,62 @@
+package org.istic.taa.jpa.model;
+
+import javax.persistence.*;
+import java.util.Set;
+
+/**
+ * Created by stephane on 02/10/15.
+ */
+@Entity
+public class Team {
+
+    private Long id;
+
+    private String name;
+
+    private Set<User> users;
+    private Sprint sprint;
+
+    public Team() {
+    }
+
+    public Team(String name) {
+        this.name = name;
+    }
+
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    @ManyToOne
+    public Set<User> getUsers() {
+        return users;
+    }
+
+    public void setUsers(Set<User> users) {
+        this.users = users;
+    }
+
+    public Sprint getSprint() {
+        return sprint;
+    }
+
+    @OneToOne
+    public void setSprint(Sprint sprint) {
+        this.sprint = sprint;
+    }
+
+    @Column
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+}
+
