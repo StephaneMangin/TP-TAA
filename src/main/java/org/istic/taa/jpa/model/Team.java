@@ -23,6 +23,7 @@ public class Team {
         this.name = name;
     }
 
+    @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     public Long getId() {
         return id;
@@ -32,7 +33,7 @@ public class Team {
         this.id = id;
     }
 
-    @ManyToOne
+    @OneToMany(mappedBy = "team")
     public Set<User> getUsers() {
         return users;
     }
@@ -45,7 +46,7 @@ public class Team {
         return sprint;
     }
 
-    @OneToOne
+    @OneToOne(mappedBy = "team")
     public void setSprint(Sprint sprint) {
         this.sprint = sprint;
     }

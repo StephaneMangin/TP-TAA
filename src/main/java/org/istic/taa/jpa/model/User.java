@@ -28,6 +28,7 @@ public class User {
         this.type = type;
     }
 
+    @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     public Long getId() {
         return id;
@@ -37,7 +38,7 @@ public class User {
         this.id = id;
     }
 
-    @OneToMany
+    @ManyToOne
     public Team getTeam() {
         return team;
     }

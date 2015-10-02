@@ -36,6 +36,7 @@ public class Task {
         this.comment = comment;
     }
 
+    @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     public Long getId() {
         return id;
@@ -45,7 +46,7 @@ public class Task {
         this.id = id;
     }
 
-    @OneToMany
+    @ManyToOne
     public User getUser() {
         return user;
     }
@@ -54,7 +55,7 @@ public class Task {
         this.user = user;
     }
 
-    @OneToMany
+    @ManyToOne
     public Sprint getSprint() {
         return sprint;
     }
@@ -72,7 +73,7 @@ public class Task {
         this.type = type;
     }
 
-    @OneToMany
+    @ManyToOne
     public Task getParent() {
         return parent;
     }
@@ -81,7 +82,7 @@ public class Task {
         this.parent = parent;
     }
 
-    @ManyToOne
+    @OneToMany(mappedBy = "parent")
     public Set<Task> getChildren() {
         return children;
     }
