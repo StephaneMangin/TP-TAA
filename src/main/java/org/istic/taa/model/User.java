@@ -1,4 +1,4 @@
-package org.istic.taa.jpa.model;
+package org.istic.taa.model;
 
 import javax.persistence.*;
 
@@ -47,6 +47,7 @@ public class User {
         this.team = team;
     }
 
+    @Transient
     public String getName() {
         return name;
     }

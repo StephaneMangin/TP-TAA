@@ -1,4 +1,4 @@
-package org.istic.taa.jpa.model;
+package org.istic.taa.model;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -51,7 +51,7 @@ public class Sprint {
         this.team = team;
     }
 
-    @ManyToOne
+    @OneToMany(mappedBy = "sprint")
     public Set<Task> getTasks() {
         return tasks;
     }
