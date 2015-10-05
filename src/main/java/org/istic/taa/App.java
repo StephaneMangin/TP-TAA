@@ -1,6 +1,6 @@
-package org.istic.taa.jaxrs;
+package org.istic.taa;
 
-import org.istic.taa.jaxrs.resources.*;
+import org.istic.taa.resources.*;
 
 import javax.ws.rs.core.Application;
 import java.util.HashSet;
