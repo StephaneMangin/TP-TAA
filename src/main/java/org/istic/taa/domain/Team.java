@@ -1,4 +1,4 @@
-package org.istic.taa.jpa.model;
+package org.istic.taa.domain;
 
 import javax.persistence.*;
 import java.util.Set;
@@ -42,11 +42,11 @@ public class Team {
         this.users = users;
     }
 
+    @OneToOne(mappedBy = "team")
     public Sprint getSprint() {
         return sprint;
     }
 
-    @OneToOne(mappedBy = "team")
     public void setSprint(Sprint sprint) {
         this.sprint = sprint;
     }

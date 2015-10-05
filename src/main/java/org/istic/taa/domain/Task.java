@@ -1,4 +1,4 @@
-package org.istic.taa.jpa.model;
+package org.istic.taa.domain;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;

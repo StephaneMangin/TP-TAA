@@ -1,4 +1,4 @@
-import org.istic.taa.jpa.model.*;
+import org.istic.taa.domain.*;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;

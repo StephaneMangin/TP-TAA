@@ -1,4 +1,4 @@
-package org.istic.taa.jpa.model;
+package org.istic.taa.domain;
 
 import javax.persistence.*;
 
@@ -22,7 +22,7 @@ public class User {
     }
 
     public User(String lastname, String firstname, Usertype type) {
-        setName(firstname, lastname);
+        this.name = lastname + " " + firstname;
         this.lastname = lastname;
         this.firstname = firstname;
         this.type = type;
@@ -47,12 +47,13 @@ public class User {
         this.team = team;
     }
 
+    @Column
     public String getName() {
         return name;
     }
 
-    public void setName(String firstname, String lastname) {
-        this.name = firstname + " " + lastname;
+    public void setName(String name) {
+        this.name = name;
     }
 
     @Column
