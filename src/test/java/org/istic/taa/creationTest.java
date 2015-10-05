@@ -1,6 +1,6 @@
 package org.istic.taa;
 
-import org.istic.taa.model.*;
+import org.istic.taa.domain.*;
 import org.junit.*;
 
 import javax.persistence.EntityManager;
