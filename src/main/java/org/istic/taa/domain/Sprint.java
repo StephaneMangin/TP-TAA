@@ -51,7 +51,7 @@ public class Sprint {
         this.team = team;
     }
 
-    @OneToMany
+    @OneToMany(mappedBy = "sprint")
     public Set<Task> getTasks() {
         return tasks;
     }

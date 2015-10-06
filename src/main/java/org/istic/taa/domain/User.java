@@ -22,7 +22,7 @@ public class User {
     }
 
     public User(String lastname, String firstname, Usertype type) {
-        this.name = lastname + " " + firstname;
+        setName(firstname, lastname);
         this.lastname = lastname;
         this.firstname = firstname;
         this.type = type;
@@ -47,13 +47,13 @@ public class User {
         this.team = team;
     }
 
-    @Column
+    @Transient
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setName(String firstname, String lastname) {
+        this.name = firstname + " " + lastname;
     }
 
     @Column
