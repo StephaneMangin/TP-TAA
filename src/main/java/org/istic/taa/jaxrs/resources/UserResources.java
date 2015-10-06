@@ -1,12 +1,9 @@
 package org.istic.taa.jaxrs.resources;
 
 import org.istic.taa.domain.User;
-import org.istic.taa.manager.TeamManager;
-import org.istic.taa.manager.UserManager;
+import org.istic.taa.repository.TeamRepository;
 
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 import java.util.logging.Logger;
 import javax.persistence.EntityManager;
 import javax.ws.rs.*;
@@ -19,7 +16,7 @@ import javax.ws.rs.core.MediaType;
 public class UserResources {
 
     private static final Logger logger = Logger.getLogger(UserResources.class.getName());
-    private EntityManager em = TeamManager.getEntityManager();
+    private EntityManager em = TeamRepository.getEntityManager();
 
     @GET
     @Path("/users/:id")

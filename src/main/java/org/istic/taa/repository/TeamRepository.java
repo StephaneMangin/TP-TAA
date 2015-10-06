@@ -1,4 +1,4 @@
-package org.istic.taa.manager;
+package org.istic.taa.repository;
 
 import org.istic.taa.domain.Team;
 
@@ -9,7 +9,7 @@ import javax.persistence.Persistence;
 /**
  * Created by stephane on 05/10/15.
  */
-public class TeamManager {
+public class TeamRepository {
 
     private static final EntityManagerFactory emf;
     private static final ThreadLocal<EntityManager> threadLocal;

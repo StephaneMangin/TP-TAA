@@ -1,16 +1,12 @@
 package org.istic.taa.jaxrs.resources;
 
-import org.hibernate.jpa.criteria.CriteriaQueryImpl;
-import org.hibernate.jpa.internal.EntityManagerImpl;
 import org.istic.taa.domain.Team;
-import org.istic.taa.manager.TeamManager;
+import org.istic.taa.repository.TeamRepository;
 
 import javax.persistence.EntityManager;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 import java.util.logging.Logger;
 
 /**
@@ -20,7 +16,7 @@ import java.util.logging.Logger;
 public class TeamResources {
 
     private static final Logger logger = Logger.getLogger(TeamResources.class.getName());
-    private EntityManager em = TeamManager.getEntityManager();
+    private EntityManager em = TeamRepository.getEntityManager();
 
     @GET
     @Path("/teams/:id")
