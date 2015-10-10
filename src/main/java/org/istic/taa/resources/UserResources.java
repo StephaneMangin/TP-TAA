@@ -48,7 +48,7 @@ public class UserResources {
         userRepository.save(u);
     }
 
-    @RequestMapping(value = "/users", method = RequestMethod.DELETE)
+    @RequestMapping(value = "/users/:id", method = RequestMethod.DELETE)
     public void deleteUser(@PathParam("id") Long id) {
         logger.info("Delete user  with id : " + id);
         userRepository.delete(id);

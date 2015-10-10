@@ -49,7 +49,7 @@ public class TeamResources {
         teamRepository.save(t);
     }
 
-    @RequestMapping(value = "/teams", method = RequestMethod.DELETE)
+    @RequestMapping(value = "/teams/:id", method = RequestMethod.DELETE)
     public void deleteTeam(@PathParam("id") Long id) {
         logger.info("Delete team  with id : " + id);
         teamRepository.delete(id);

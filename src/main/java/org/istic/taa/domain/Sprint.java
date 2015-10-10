@@ -12,6 +12,7 @@ public class Sprint {
 
     private Long id;
 
+    private String name;
     private String comment;
 
     private LocalDateTime startDate;
@@ -85,5 +86,14 @@ public class Sprint {
 
     public void setComment(String comment) {
         this.comment = comment;
+    }
+
+    @Column
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }
