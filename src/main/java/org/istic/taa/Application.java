@@ -5,6 +5,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.AuthorizationScopeBuilder;
 import springfox.documentation.service.ApiInfo;
@@ -25,6 +27,8 @@ import static com.google.common.collect.Lists.*;
  */
 @SpringBootApplication
 @EnableSwagger2 //Enable swagger 2.0 spec
+@Configuration
+@EnableAspectJAutoProxy
 @ComponentScan(basePackageClasses = {
         SpringFoxApi.class, // Main API entrypoint
         TeamResources.class,
