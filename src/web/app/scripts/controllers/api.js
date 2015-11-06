@@ -2,11 +2,11 @@
 
 /**
  * @ngdoc function
- * @name agileManagerApp.controller:AboutCtrl
+ * @name agileManagerApp.controller:MainCtrl
  * @description
- * # AboutCtrl
+ * # MainCtrl
  * Controller of the agileManagerApp
  */
 angular.module('agileManagerApp')
-  .controller('AboutCtrl', function ($scope) {
+  .controller('ApiCtrl', function ($scope) {
   });

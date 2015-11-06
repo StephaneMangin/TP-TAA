@@ -8,10 +8,5 @@
  * Controller of the agileManagerApp
  */
 angular.module('agileManagerApp')
-  .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('MainCtrl', function ($scope) {
   });

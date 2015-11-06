@@ -10,14 +10,10 @@
  */
 angular
   .module('agileManagerApp', [
-    'ngAnimate',
-    'ngAria',
     'ngCookies',
     'ngMessages',
     'ngResource',
-    'ngRoute',
-    'ngSanitize',
-    'ngTouch'
+    'ngRoute'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -25,6 +21,11 @@ angular
         templateUrl: 'views/main.html',
         controller: 'MainCtrl',
         controllerAs: 'main'
+      })
+      .when('/api', {
+        templateUrl: 'views/api.html',
+        controller: 'ApiCtrl',
+        controllerAs: 'api'
       })
       .when('/about', {
         templateUrl: 'views/about.html',
