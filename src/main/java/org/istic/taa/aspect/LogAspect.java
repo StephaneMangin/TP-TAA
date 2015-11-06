@@ -12,8 +12,8 @@ public class LogAspect {
     private static Logger logger;
 
 	//@Before("execution(public * *.*(..))")
-	@AfterReturning("execution(public * *.*(..))")
-	public void log(JoinPoint pjp) throws Throwable{
+	@AfterReturning(value = "execution(public Class *Resources.*(..))")
+	public void logResources(JoinPoint pjp) throws Throwable{
         logger = Logger.getLogger(pjp.getSignature().getName());
 		logger.info(pjp.getSignature().getName() + pjp.getThis().toString());
 		
